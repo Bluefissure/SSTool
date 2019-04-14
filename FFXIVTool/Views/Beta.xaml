@@ -21,14 +21,14 @@
                 Maximum="180"/>
         <Slider Value="{Binding Path=Y}" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="140" Minimum="-180" Maximum="180"/>
         <Slider Value="{Binding Path=Z}" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="140" Minimum="-180" Maximum="180" VerticalContentAlignment="Center"/>
-        <CheckBox IsChecked="{Binding Path=Frozen}" Content="Freeze Angles" HorizontalAlignment="Left" Margin="345,43,0,0" VerticalAlignment="Top"/>
+        <CheckBox IsChecked="{Binding Path=Frozen}" Content="冻结角度" HorizontalAlignment="Left" Margin="345,43,0,0" VerticalAlignment="Top"/>
         <StackPanel HorizontalAlignment="Left" Height="237" Margin="10,103,0,0" VerticalAlignment="Top" Width="265">
             <Label Content="Debug" FontWeight="Bold" />
-            <Label Content="Angles" />
+            <Label Content="角度" />
             <Label Content="{Binding X}" />
             <Label Content="{Binding Y}" />
             <Label Content="{Binding Z}" />
-            <Label Content="Quaternion" />
+            <Label Content="四元数" />
             <Label Content="{Binding QX}" />
             <Label Content="{Binding QY}" />
             <Label Content="{Binding QZ}" />
@@ -37,6 +37,7 @@
         <TextBox HorizontalAlignment="Left" Height="15" Margin="155,10,0,0" TextWrapping="Wrap" Text="{Binding X, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="185"/>
         <TextBox HorizontalAlignment="Left" Height="15" Margin="155,41,0,0" TextWrapping="Wrap" Text="{Binding Y, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="185"/>
         <TextBox HorizontalAlignment="Left" Height="15" Margin="155,72,0,0" TextWrapping="Wrap" Text="{Binding Z, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="185"/>
-        <TextBlock HorizontalAlignment="Left" Margin="223,286,0,0" TextWrapping="Wrap" Text="NOTE: This is a Beta panel.  The UI here is going to be a bit messy, but will serve its purpose." VerticalAlignment="Top" Height="54" Width="267" Foreground="#DDCF1E1E"/>
+        <TextBlock HorizontalAlignment="Left" Margin="223,286,0,0" TextWrapping="Wrap" Text="注意：这里是Beta面板。 这里的UI
+界面会有点混乱，但是会有效果的。" VerticalAlignment="Top" Height="54" Width="267" Foreground="#DDCF1E1E"/>
     </Grid>
 </UserControl>

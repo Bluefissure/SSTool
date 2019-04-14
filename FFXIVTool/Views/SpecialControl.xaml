@@ -11,7 +11,7 @@
              Background="{DynamicResource MaterialDesignPaper}"
              TextElement.FontWeight="Medium"
              TextElement.FontSize="13.25"
-             Header="Character"
+             Header="角色"
              Position="Right"
              mc:Ignorable="d" 
              d:DesignHeight="470" d:DesignWidth="570">
@@ -37,7 +37,7 @@
                                               controls:TabControlHelper.Underlined="TabPanel"
                                               Background="{DynamicResource MaterialDesignPaper}" SelectionChanged="AnimatedTabControl_SelectionChanged"
                                                   >
-                    <TabItem Header="Color Selector" Name="ColorTab">
+                    <TabItem Header="颜色选择" Name="ColorTab">
                         <Grid>
                             <Button Content="Button" HorizontalAlignment="Left" Margin="746,294,-251,0" VerticalAlignment="Top" Width="75"/>
                             <ListView x:Name="colorListView" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,42,0,0" SelectionChanged="colorListView_SelectionChanged">
@@ -51,18 +51,18 @@
                                 </ListView.ItemsPanel>
                             </ListView>
                             <ComboBox materialDesign:HintAssist.Hint="Select Type" x:Name="ClanBox" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="ClanBox_SelectionChanged" PreviewMouseDown="ClanBox_PreviewMouseDown" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
-                                <ComboBoxItem Content="Skin Color"/>
-                                <ComboBoxItem Content="Hair Color"/>
-                                <ComboBoxItem Content="Highlights Color"/>
-                                <ComboBoxItem Content="Lip Color"/>
-                                <ComboBoxItem Content="Right-Eye Color"/>
-                                <ComboBoxItem Content="Left-Eye Color"/>
-                                <ComboBoxItem Content="FacePaint Color"/>
-                                <ComboBoxItem Content="Limbal-Eye Color"/>
+                                <ComboBoxItem Content="肤色"/>
+                                <ComboBoxItem Content="发色"/>
+                                <ComboBoxItem Content="挑染颜色"/>
+                                <ComboBoxItem Content="唇色"/>
+                                <ComboBoxItem Content="右眼颜色"/>
+                                <ComboBoxItem Content="左眼颜色"/>
+                                <ComboBoxItem Content="面妆颜色"/>
+                                <ComboBoxItem Content="眼影颜色"/>
                             </ComboBox>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Hair Selector" Name="HairTab">
+                    <TabItem Header="发型选择" Name="HairTab">
                         <Grid Margin="-7,0,-4,-5">
                             <Grid.Background>
                                 <ImageBrush ImageSource="/FFXIVTool;component/Resources/Background.png">
@@ -86,13 +86,13 @@
                             </ListView>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Face Paint" Name="PaintTab">
+                    <TabItem Header="面妆" Name="PaintTab">
                         <Grid Margin="-7,0,-4,-5">
                             <Grid.Background>
                                 <ImageBrush ImageSource="/FFXIVTool;component/Resources/Background.png">
                                 </ImageBrush>
                             </Grid.Background>
-                            <CheckBox Content="Reverse FacePaint" x:Name="CheckIncluded" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="171" FontWeight="Bold" FontSize="14" Height="17"/>
+                            <CheckBox Content="反转面妆" x:Name="CheckIncluded" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="171" FontWeight="Bold" FontSize="14" Height="17"/>
                             <ListView x:Name="FacePaintFeature" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="3,22,6,0" SelectionChanged="CharacterFeature2_SelectionChanged">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
@@ -111,7 +111,7 @@
                             </ListView>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Facial Feature" Name="FacialTab">
+                    <TabItem Header="面部" Name="FacialTab">
                         <Grid Margin="-7,0,-4,-5">
                             <Grid.Background>
                                 <ImageBrush ImageSource="/FFXIVTool;component/Resources/Background.png">
@@ -135,15 +135,15 @@
                             </ListView>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Model List" Name="ModelType">
+                    <TabItem Header="模型列表" Name="ModelType">
                         <Grid>
                             <DataGrid x:Name="ModelBox" HorizontalAlignment="Left" Height="267" Margin="0,2,0,0" VerticalAlignment="Top" Width="562" CanUserAddRows="False" CanUserDeleteRows="False" AutoGenerateColumns="False"  IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow" CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserResizeRows="False"  HorizontalScrollBarVisibility="Hidden" SelectionChanged="ModelBox_SelectionChanged">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="ID" Binding="{Binding Path=Index}" Width="56"/>
-                                    <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="*"/>
+                                    <DataGridTextColumn Header="名称" Binding="{Binding Path=Name}" Width="*"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <TextBox x:Name="SearchModelBox" materialDesign:HintAssist.Hint="Search..." Style="{StaticResource MaterialDesignTextBox}" HorizontalAlignment="Left" Height="36" Margin="2,268,0,-4" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" TextChanged="SearchModelBox_TextChanged" BorderThickness="0,1"/>
+                            <TextBox x:Name="SearchModelBox" materialDesign:HintAssist.Hint="搜索..." Style="{StaticResource MaterialDesignTextBox}" HorizontalAlignment="Left" Height="36" Margin="2,268,0,-4" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" TextChanged="SearchModelBox_TextChanged" BorderThickness="0,1"/>
                         </Grid>
                     </TabItem>
                 </controls:MetroAnimatedTabControl>

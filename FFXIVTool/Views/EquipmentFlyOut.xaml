@@ -11,7 +11,7 @@
     Background="{DynamicResource MaterialDesignPaper}"      
     TextElement.FontWeight="Medium"    
     TextElement.FontSize="13.25"     
-    Header="Equipment"
+    Header="装备"
     Position="Right"
     mc:Ignorable="d"
     d:DesignHeight="470" d:DesignWidth="480">
@@ -29,7 +29,7 @@
     </controls:Flyout.Resources>
 
     <Grid>
-        <Label FontSize="16" x:Name="EquippedLabel" Content="Currently Equipped:" HorizontalAlignment="Left" Margin="35,-69,0,0" VerticalAlignment="Top" Height="30" Width="168" FontWeight="Bold"/>
+        <Label FontSize="16" x:Name="EquippedLabel" Content="当前装备:" HorizontalAlignment="Left" Margin="35,-69,0,0" VerticalAlignment="Top" Height="30" Width="168" FontWeight="Bold"/>
         <Label FontSize="16" x:Name="CurrentlyEquippedName" Content="None" HorizontalAlignment="Left" Margin="180,-69,0,0" VerticalAlignment="Top" Width="286" FontWeight="Bold"/>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" >
             <StackPanel Margin="2" Orientation="Vertical">
@@ -38,54 +38,54 @@
                                               Margin="2"
                                               controls:TabControlHelper.Underlined="TabPanel"
                                               Background="{DynamicResource MaterialDesignPaper}" SelectionChanged="AnimatedTabControl_SelectionChanged">
-                    <TabItem Header="Equipment Selector" Name="EquipTab">
+                    <TabItem Header="装备选择" Name="EquipTab">
                         <Grid>
-                            <CheckBox Content="Include OffHand" Name="CheckIncluded" HorizontalAlignment="Left" Margin="181,11,0,0" VerticalAlignment="Top" Width="171"/>
+                            <CheckBox Content="包含副手" Name="CheckIncluded" HorizontalAlignment="Left" Margin="181,11,0,0" VerticalAlignment="Top" Width="171"/>
                             <DataGrid x:Name="EquipBox" HorizontalAlignment="Left" Height="270" Margin="-6,42,0,0" VerticalAlignment="Top" Width="478" CanUserAddRows="False" CanUserDeleteRows="False" AutoGenerateColumns="False"  IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow" CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserResizeRows="False"  HorizontalScrollBarVisibility="Hidden" SelectionChanged="EquipBox_SelectionChanged">
                                 <DataGrid.Columns>
-                                    <DataGridTemplateColumn Width="68" CanUserSort="False" Header="Icon">
+                                    <DataGridTemplateColumn Width="68" CanUserSort="False" Header="图标">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
                                                 <Image Source="{Binding Path=Icon}" Width="38" Height="38"/>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
-                                    <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="2.4*" />
-                                    <DataGridTextColumn Header="Model Values" Binding="{Binding Path=ModelMain}" Width="*"/>
+                                    <DataGridTextColumn Header="名称" Binding="{Binding Path=Name}" Width="2.4*" />
+                                    <DataGridTextColumn Header="模型值" Binding="{Binding Path=ModelMain}" Width="*"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <TextBox x:Name="SearchModelBox" materialDesign:HintAssist.Hint="Search..." VerticalAlignment="Top" Style="{StaticResource MaterialDesignTextBox}" HorizontalAlignment="Left" Margin="2,313,0,0" TextWrapping="Wrap" Width="461" TextChanged="SearchModelBox_TextChanged" BorderThickness="0,1" Height="27"/>
+                            <TextBox x:Name="SearchModelBox" materialDesign:HintAssist.Hint="搜索..." VerticalAlignment="Top" Style="{StaticResource MaterialDesignTextBox}" HorizontalAlignment="Left" Margin="2,313,0,0" TextWrapping="Wrap" Width="461" TextChanged="SearchModelBox_TextChanged" BorderThickness="0,1" Height="27"/>
                             <ComboBox materialDesign:HintAssist.Hint="Select Type" x:Name="EquipBoxC" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="154" SelectionChanged="EquipBoxC_SelectionChanged" PreviewMouseDown="EquipBoxC_PreviewMouseDown">
-                                <ComboBoxItem Content="Main Hand"/>
-                                <ComboBoxItem Content="Off Hand"/>
-                                <ComboBoxItem Content="Head"/>
-                                <ComboBoxItem Content="Body"/>
-                                <ComboBoxItem Content="Hands"/>
-                                <ComboBoxItem Content="Legs"/>
-                                <ComboBoxItem Content="Feet"/>
-                                <ComboBoxItem Content="Earing"/>
-                                <ComboBoxItem Content="Neck"/>
-                                <ComboBoxItem Content="Wrist"/>
-                                <ComboBoxItem Content="Right Finger"/>
-                                <ComboBoxItem Content="Left Finger"/>
-                                <ComboBoxItem Content="Props Main Hand"/>
-                                <ComboBoxItem Content="Props Off Hand"/>
+                                <ComboBoxItem Content="主手"/>
+                                <ComboBoxItem Content="副手"/>
+                                <ComboBoxItem Content="头部"/>
+                                <ComboBoxItem Content="身体"/>
+                                <ComboBoxItem Content="手部"/>
+                                <ComboBoxItem Content="腿部"/>
+                                <ComboBoxItem Content="脚部"/>
+                                <ComboBoxItem Content="耳环"/>
+                                <ComboBoxItem Content="颈部"/>
+                                <ComboBoxItem Content="腕部"/>
+                                <ComboBoxItem Content="右手戒指"/>
+                                <ComboBoxItem Content="左手戒指"/>
+                                <ComboBoxItem Content="主手道具"/>
+                                <ComboBoxItem Content="副手道具"/>
                             </ComboBox>
-                            <CheckBox Content="Keep Dyes" x:Name="KeepDyes" HorizontalAlignment="Left" Margin="365,11,0,0" VerticalAlignment="Top" Width="98" Checked="KeepDyes_Checked" Unchecked="KeepDyes_Unchecked"/>
+                            <CheckBox Content="保持染色" x:Name="KeepDyes" HorizontalAlignment="Left" Margin="365,11,0,0" VerticalAlignment="Top" Width="98" Checked="KeepDyes_Checked" Unchecked="KeepDyes_Unchecked"/>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="NPC Selector" Name="NPCTab">
+                    <TabItem Header="NPC选择" Name="NPCTab">
                         <Grid>
                             <DataGrid x:Name="residentlist" HorizontalAlignment="Left" Height="270" Margin="-6,42,0,0" VerticalAlignment="Top" Width="478" CanUserAddRows="False" CanUserDeleteRows="False" AutoGenerateColumns="False"  IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow" CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserResizeRows="False"  HorizontalScrollBarVisibility="Hidden" SelectionChanged="residentlist_SelectionChanged">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="*"/>
+                                    <DataGridTextColumn Header="名称" Binding="{Binding Path=Name}" Width="*"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <TextBox x:Name="SearchModelBox2" materialDesign:HintAssist.Hint="Search..." Style="{StaticResource MaterialDesignTextBox}" HorizontalAlignment="Left" Height="31" Margin="2,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="461" TextChanged="SearchModelBox2_TextChanged" BorderThickness="0,1"/>
+                            <TextBox x:Name="SearchModelBox2" materialDesign:HintAssist.Hint="搜索..." Style="{StaticResource MaterialDesignTextBox}" HorizontalAlignment="Left" Height="31" Margin="2,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="461" TextChanged="SearchModelBox2_TextChanged" BorderThickness="0,1"/>
                             <ComboBox SelectedIndex="0" materialDesign:HintAssist.Hint="Select Type" x:Name="LoadType" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="146">
-                                <ComboBoxItem Content="All"/>
-                                <ComboBoxItem Content="Appearance Only"/>
-                                <ComboBoxItem Content="Equipment Only"/>
+                                <ComboBoxItem Content="所有"/>
+                                <ComboBoxItem Content="仅外貌"/>
+                                <ComboBoxItem Content="仅装备"/>
                             </ComboBox>
                         </Grid>
                     </TabItem>

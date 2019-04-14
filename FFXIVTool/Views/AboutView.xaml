@@ -21,9 +21,9 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Image Source="/FFXIVTool;component/Resources/ffxivmeteorimage.png" Grid.RowSpan="3" StretchDirection="Both" VerticalAlignment="Stretch" Stretch="UniformToFill" Margin="0,34,10,10" />
-                <TextBlock Grid.Column="1" Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="16 16 16 2">Get In Touch</TextBlock>
+                <TextBlock Grid.Column="1" Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="16 16 16 2">取得联系</TextBlock>
                 <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBodyLight}"
-                                       VerticalAlignment="Center">Say hello, make a feature request, or raise a bug through one of these channels:</TextBlock>
+                                       VerticalAlignment="Center">通过以下频道与开发者取得联系、打招呼、提需求或者上报错误：</TextBlock>
                 <Border Grid.Row="2" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Grid.Column="1">
                     <Grid Margin="8">
                         <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
@@ -68,9 +68,9 @@
                 </Grid.ColumnDefinitions>
                 <materialDesign:PackIcon Kind="GithubCircle" Width="160" Height="160" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <StackPanel Grid.Column="1">
-                    <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="16 16 16 8">Open Source</TextBlock>
+                    <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="16 16 16 8">开源</TextBlock>
                     <TextBlock TextWrapping="Wrap" Margin="16 0 16 8" Foreground="{DynamicResource MaterialDesignBodyLight}"
-                                           VerticalAlignment="Top" Text="This project is completely open source. If you like it and want to say thanks you could hit the GitHub Star button and message us your thanks."/>
+                                           VerticalAlignment="Top" Text="这个项目是完全开源的。 如果您喜欢它并想表示感谢，您可以在GitHub中点击Star按钮来向我们表示感谢。"/>
                 </StackPanel>
                 <Border Grid.Row="1" BorderThickness="0 1 0 1" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="6,8,9,-24" Grid.Column="1">
                     <Grid Margin="0">
@@ -78,22 +78,22 @@
                             x:Name="GitHubButton1" Width="auto" Click="DonateButton_OnClick">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="Donate" />
-                                <TextBlock Margin="0 0 0 0" VerticalAlignment="Center" FontSize="14" Width="auto"><Run Text="Donate to Johto"/></TextBlock>
+                                <TextBlock Margin="0 0 0 0" VerticalAlignment="Center" FontSize="14" Width="auto"><Run Text="向Johto捐助"/></TextBlock>
                             </StackPanel>
                         </Button>
                         <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Right"
                             x:Name="ChatButton1" Click="DonateButton_OnClick2" Margin="110,0,0,0" Width="auto">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="Donate" />
-                                <TextBlock Margin="0 0 0 0" VerticalAlignment="Center" FontSize="14"><Run Text="Donate to LeonBlade"/></TextBlock>
+                                <TextBlock Margin="0 0 0 0" VerticalAlignment="Center" FontSize="14"><Run Text="向LeonBlade捐助"/></TextBlock>
                             </StackPanel>
                         </Button>
                     </Grid>
                 </Border>
             </Grid>
         </materialDesign:Card>
-        <GroupBox Header="About"  HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource MaterialDesignGroupBox}" Margin="10,10,0,0" materialDesign:ShadowAssist.ShadowDepth="Depth3" BorderThickness="1" Height="151" Width="420" />
-        <TextBlock HorizontalAlignment="Left" Margin="15,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="114" Width="415"><Run FontSize="14" Text="This trainer's base code was made by LeonBlade and then the project continued with Johto working on it. This application uses the following libraries in this project: MaterialDesignInXAML, MahApps, Fody, AutoUpdater.Net, Newtonsoft.Json and Memory.dll. This project uses portions of the code from the Wardrobe, thanks to Goat helping out."/></TextBlock>
-        <TextBlock Foreground="{DynamicResource MaterialDesignBodyLight}" TextWrapping="Wrap" Margin="445,329,498,57" VerticalAlignment="Center" Text="Feel like you want to make a donation? It would be gratefully received. Click the button to donate via Ko-fi." Height="74"/>
+        <GroupBox Header="关于"  HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource MaterialDesignGroupBox}" Margin="10,10,0,0" materialDesign:ShadowAssist.ShadowDepth="Depth3" BorderThickness="1" Height="151" Width="420" />
+        <TextBlock HorizontalAlignment="Left" Margin="15,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="114" Width="415"><Run FontSize="14" Text="这个工具的基本代码是由LeonBlade制作的，然后该项目继续与Johto一起维护。 此程序在项目中使用以下第三方库：MaterialDesignInXAML，MahApps，Fody，AutoUpdater.Net，Newtonsoft.Json和Memory.dll。这个项目使用了Wardrobe的部分代码，感谢Goat的帮忙。"/></TextBlock>
+        <TextBlock Foreground="{DynamicResource MaterialDesignBodyLight}" TextWrapping="Wrap" Margin="445,329,498,57" VerticalAlignment="Center" Text="你想捐助吗？ 我们将对您的捐助十分感激，点击按钮通过Ko-fi捐赠。" Height="74"/>
     </Grid>
 </UserControl>
