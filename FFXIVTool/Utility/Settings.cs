@@ -28,6 +28,7 @@ namespace FFXIVTool.Utility
             }
         }
         #endregion
+        public string Language { get; set; } = "English";
         public string LastUpdated { get; set; }
         public string AoBOffset { get; set; }
         public string GposeOffset { get; set; }

@@ -35,17 +35,20 @@ namespace FFXIVTool.ViewModel
 
 		public MainViewModel()
         {
+            
+            mediator = new Mediator();
+            MemoryManager.Instance.MemLib.OpenProcess(gameProcId);
+            LoadSettings();
             if (!MainWindow.HasRead)
             {
                 if (!App.IsValidGamePath(Properties.Settings.Default.GamePath))
                     return;
-                var realm = new ARealmReversed(Properties.Settings.Default.GamePath, SaintCoinach.Ex.Language.English);
+                var language = Settings.Instance.Language;
+                var ExLanguage = (SaintCoinach.Ex.Language)Enum.Parse(typeof(SaintCoinach.Ex.Language), language);
+                var realm = new ARealmReversed(Properties.Settings.Default.GamePath, ExLanguage);
                 Initialize(realm);
                 MainWindow.HasRead = true;
             }
-            mediator = new Mediator();
-            MemoryManager.Instance.MemLib.OpenProcess(gameProcId);
-            LoadSettings();
             worker = new BackgroundWorker();
             worker.DoWork += Worker_DoWork;
             worker.WorkerSupportsCancellation = true;
@@ -126,7 +129,12 @@ namespace FFXIVTool.ViewModel
                 ServicePointManager.SecurityProtocol = (ServicePointManager.SecurityProtocol & SecurityProtocolType.Ssl3) | (SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12);
                 using (var HAH = new WebClient())
                 {
-                    xmlStr = HAH.DownloadString(@"https://raw.githubusercontent.com/imchillin/SSTool/master/FFXIVTool/OffsetSettings.xml");
+                    var SettingsUpdateURL = @"https://raw.githubusercontent.com/imchillin/SSTool/master/FFXIVTool/OffsetSettings.xml";
+                    if (Settings.Instance.Language == "ChineseSimplified")
+                    {
+                        SettingsUpdateURL = @"https://raw.githubusercontent.com/imchillin/SSTool/master/FFXIVTool/OffsetSettings_CN.xml";
+                    }
+                    xmlStr = HAH.DownloadString(SettingsUpdateURL);
                 }
                 var serializer = new XmlSerializer(typeof(Settings), "");
                 var xmlDoc = new System.Xml.XmlDocument();
