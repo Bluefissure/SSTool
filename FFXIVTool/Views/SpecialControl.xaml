@@ -50,7 +50,7 @@
 
                                 </ListView.ItemsPanel>
                             </ListView>
-                            <ComboBox materialDesign:HintAssist.Hint="Select Type" x:Name="ClanBox" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="ClanBox_SelectionChanged" PreviewMouseDown="ClanBox_PreviewMouseDown" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
+                            <ComboBox materialDesign:HintAssist.Hint="选择类型" x:Name="ClanBox" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="ClanBox_SelectionChanged" PreviewMouseDown="ClanBox_PreviewMouseDown" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
                                 <ComboBoxItem Content="肤色"/>
                                 <ComboBoxItem Content="发色"/>
                                 <ComboBoxItem Content="挑染颜色"/>

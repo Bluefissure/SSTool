@@ -6,7 +6,7 @@
 
         xmlns:local="clr-namespace:FFXIVTool.Windows"
         mc:Ignorable="d"
-        Title="Character Save Lookup" Height="285.185" Width="479.111" WindowStartupLocation="CenterOwner">
+        Title="角色保存查询" Height="285.185" Width="479.111" WindowStartupLocation="CenterOwner">
     <Grid>
         <ListBox x:Name="CharacterListbox" HorizontalAlignment="Left" Height="234" Margin="10,10,0,0" VerticalAlignment="Top" Width="451" SelectionChanged="CharacterListbox_SelectionChanged" FontSize="14"/>
 

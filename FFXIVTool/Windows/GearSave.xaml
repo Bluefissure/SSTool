@@ -12,16 +12,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FFXIVTool.Windows"
         mc:Ignorable="d"
-        Title="Save Gearset" Height="153.166" Width="310.333" WindowStartupLocation="CenterOwner">
+        Title="保存装备套装" Height="153.166" Width="310.333" WindowStartupLocation="CenterOwner">
     <Grid>
         <TextBox x:Name="FilenameText" Style="{StaticResource MaterialDesignFloatingHintTextBox}" MaxLength="240" Margin="10,21,0,0" VerticalAlignment="Top" HorizontalAlignment="left" Width="274" TextAlignment="Center" KeyDown="FilenameText_KeyDown">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Orientation="Horizontal"  Margin="0 0 0 0" >
-                    <TextBlock><Run x:Name="RunText" Text="Write Gearset name here..."/></TextBlock>
+                    <TextBlock><Run x:Name="RunText" Text="填写装备套装名称..."/></TextBlock>
                 </StackPanel>
             </materialDesign:HintAssist.Hint>
         </TextBox>
-        <Button Content="OK" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="164,71,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_1"/>
+        <Button Content="确定" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+        <Button Content="取消" HorizontalAlignment="Left" Margin="164,71,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_1"/>
     </Grid>
 </Window>

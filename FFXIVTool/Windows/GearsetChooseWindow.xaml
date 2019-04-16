@@ -11,18 +11,18 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="GearsetChooseWindow" Height="400.598" Width="364.035" WindowStartupLocation="CenterOwner">
+        Title="选择装备套装窗口" Height="400.598" Width="364.035" WindowStartupLocation="CenterOwner">
     <Grid>
         <DataGrid x:Name="GearDataGrid" HorizontalAlignment="Left" Height="306" Margin="0,10,0,0" VerticalAlignment="Top" Width="346" CanUserAddRows="False" CanUserDeleteRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Path=GearSave}" IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow"  CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserResizeRows="False"  HorizontalScrollBarVisibility="Hidden" SelectionChanged="GearDataGrid_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Gearset Name" Binding="{Binding Path=Description}"/>
-                <DataGridTextColumn Header="Date Created" Binding="{Binding Path=DateCreated}"/>
+                <DataGridTextColumn Header="套装名称" Binding="{Binding Path=Description}"/>
+                <DataGridTextColumn Header="创建时间" Binding="{Binding Path=DateCreated}"/>
             </DataGrid.Columns>
         </DataGrid>
         <TextBox x:Name="GearSetSearchText" Style="{StaticResource MaterialDesignFloatingHintTextBox}" MaxLength="240" Margin="10,323,0,0" VerticalAlignment="Top" HorizontalAlignment="left" Width="336" TextAlignment="Center" TextChanged="GearSetSearchText_TextChanged" BorderThickness="0,0,0,1">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Orientation="Horizontal"  Margin="0 0 0 0" >
-                    <TextBlock><Run Text="Search Gearset name here..."/></TextBlock>
+                    <TextBlock><Run Text="搜索套装名称..."/></TextBlock>
                 </StackPanel>
             </materialDesign:HintAssist.Hint>
         </TextBox>
