@@ -7,22 +7,19 @@
   <AoBOffset>1AA5B38</AoBOffset>
   <TargetOffset>1AA46F8</TargetOffset>
   <TimeOffset>1A89750</TimeOffset>
-  <WeatherOffset>1A87608</WeatherOffset>
-  <TerritoryOffset>‭1AE1E18‬</TerritoryOffset>
+  <WeatherOffset>1A5E738</WeatherOffset>
+  <TerritoryOffset>1AE1DF8</TerritoryOffset>
   <GposeFilters>1A87608</GposeFilters>
-  <MusicOffset>1AA7520</MusicOffset>
+  <MusicOffset>1ABD550</MusicOffset>
   <CharacterRenderOffset>41FA50</CharacterRenderOffset>
   <CharacterRenderOffset2>41FB00</CharacterRenderOffset2>
-
   <Character>
     <Name>30</Name>
     <Race>1690</Race>
     <Gender>1691</Gender>
     <Clan>1694</Clan>
     <Voices>1778</Voices>
-
     <Body Base="F0">
-
       <Position>
         <X>50</X>
         <Y>54</Y>
