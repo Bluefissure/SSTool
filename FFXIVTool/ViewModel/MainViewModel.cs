@@ -132,7 +132,7 @@ namespace FFXIVTool.ViewModel
                     var SettingsUpdateURL = @"https://raw.githubusercontent.com/imchillin/SSTool/master/FFXIVTool/OffsetSettings.xml";
                     if (Settings.Instance.Language == "ChineseSimplified")
                     {
-                        SettingsUpdateURL = @"https://raw.githubusercontent.com/imchillin/SSTool/master/FFXIVTool/OffsetSettings_CN.xml";
+                        SettingsUpdateURL = @"https://raw.githubusercontent.com/Bluefissure/SSTool/CNUI/FFXIVTool/OffsetSettings_CN.xml";
                     }
                     xmlStr = HAH.DownloadString(SettingsUpdateURL);
                 }
@@ -162,7 +162,7 @@ namespace FFXIVTool.ViewModel
             MemoryManager.Instance.GposeAddress = MemoryManager.Instance.GetBaseAddress(int.Parse(Settings.Instance.GposeOffset, NumberStyles.HexNumber));
             MemoryManager.Instance.TimeAddress = MemoryManager.Instance.GetBaseAddress(int.Parse(Settings.Instance.TimeOffset, NumberStyles.HexNumber));
             MemoryManager.Instance.WeatherAddress = MemoryManager.Instance.GetBaseAddress(int.Parse(Settings.Instance.WeatherOffset, NumberStyles.HexNumber));
-            MemoryManager.Instance.TerritoryAddress = MemoryManager.Instance.GetBaseAddress(int.Parse(Settings.Instance.TerritoryOffset, NumberStyles.HexNumber));
+            //MemoryManager.Instance.TerritoryAddress = MemoryManager.Instance.GetBaseAddress(int.Parse(Settings.Instance.TerritoryOffset, NumberStyles.HexNumber));
             MemoryManager.Instance.MusicOffset = MemoryManager.Instance.GetBaseAddress(int.Parse(Settings.Instance.MusicOffset, NumberStyles.HexNumber));
             MemoryManager.Instance.GposeFilters = MemoryManager.Instance.GetBaseAddress(int.Parse(Settings.Instance.GposeFilters, NumberStyles.HexNumber));
             MemoryManager.Instance.CharacterRenderAddress = MemoryManager.Instance.GetBaseAddress(int.Parse(Settings.Instance.CharacterRenderOffset, NumberStyles.HexNumber));
